@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tb_mahasiswa {
+  id_mahasiswa   Int    @id @default(autoincrement())
+  nama_mahasiswa String @db.VarChar(50)
+  nim_mahasiswa  String @unique(map: "nim_mahasiswa") @db.VarChar(10)
+  jurusan        String @db.VarChar(50)
+}
