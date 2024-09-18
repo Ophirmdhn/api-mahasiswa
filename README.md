@@ -23,7 +23,7 @@
 - buat file fitur.service.js
 - buat file fitur.controller.js
 
-## Hasing Password
+## Hashing Password
 - npm i bcrypt
 - buat database user
 - column password minimal panjang 60 (saran 100)
