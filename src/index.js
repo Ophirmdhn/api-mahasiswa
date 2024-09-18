@@ -13,9 +13,11 @@ app.get("/", (req, res) => {
 })
 
 const mahasiswaController = require("./mahasiswa/mahasiswa.controller")
+const userController = require("./user/user.controller")
 
 app.use("/mahasiswa", mahasiswaController) // untuk menggunakan controller dan membuat endpoint /mahasiswa
+app.use("/user", userController) // untuk menggunakan controller dan membuat endpoint /user
 
 app.listen(port, () => {
-    console.log(`run di port ${port}`)
+    console.log(`run di 127.0.0.1:${port}`)
 })

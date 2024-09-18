@@ -13,3 +13,10 @@ model tb_mahasiswa {
   nim_mahasiswa  String @unique(map: "nim_mahasiswa") @db.VarChar(10)
   jurusan        String @db.VarChar(50)
 }
+
+model tb_user {
+  id       Int    @id @default(autoincrement())
+  name     String @db.VarChar(50)
+  email    String @unique(map: "email") @db.VarChar(50)
+  password String @db.VarChar(100)
+}
